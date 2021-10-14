@@ -1,5 +1,8 @@
 from django.shortcuts import render
-from 
+from django.contrib.auth.models import User
+from django.contrib.auth import login
 
-# Create your views here.
-def login_user(request):
+
+def login(request):
+    user = User.objects.all()
+    login(request,user)
